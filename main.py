@@ -5,15 +5,15 @@ def divide(a: str, b: str) -> (int, int):
     n, m = len(a), len(b)
     r = 0
     s = []
+    b = int(b)
     for i in range(n):
-        print(True)
         r = r * 10 + int(a[i])
         q = 0
-        while q < 10 and q * int(b) <= r:
+        while q < 10 and q * b <= r:
             q += 1
         q -= 1
         s.append(str(q))
-        r -= q * int(b)
+        r -= q * b
     if not s:
         s = 0
     else:
